@@ -9,6 +9,7 @@ app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///vnsdatabase.db'
 app.config['SQLALCHEMY_TRACK_NOTIFICATIONS']=False
 
 db=SQLAlchemy(app)
+app.app_context().push()
 
 class User(db.Model):
    # __tablename__='user'
